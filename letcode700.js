@@ -21,5 +21,5 @@ const searchBST = function (root, val) {
   return null;
 };
 
-// Time Complexity: O(n)
+// Time Complexity: O(logn)
 // Space Complexity: O(1)
