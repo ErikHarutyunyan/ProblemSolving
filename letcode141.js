@@ -13,7 +13,7 @@ Explanation: There is a cycle in the linked list, where the tail connects to the
 
 */
 
-const hasCycle = function (head) {
+/* const hasCycle = function (head) {
   let ptr = head;
   let tmp = head;
   while (tmp && ptr.next) {
@@ -22,7 +22,16 @@ const hasCycle = function (head) {
     if (ptr === tmp) return true;
   }
   return false;
-};
+}; */
+
+ const hasCycle = function (head) {
+   function rec(tmp, ptr) {
+        if(!tmp || !ptr.next) return false;
+        if(tmp.next === ptr) return true;
+        return run(tmp.next.next, ptr.next);
+    }
+    return rec(head, head);
+ }
 
 // Space complexity: O(1)
 // Time complexity: O(n)
