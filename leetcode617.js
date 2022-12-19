@@ -7,3 +7,5 @@ const mergeTrees = function (t1, t2) {
 
   return t1;
 };
+// Time Complexity = O(n)
+// Space Complexity = O(n) 
