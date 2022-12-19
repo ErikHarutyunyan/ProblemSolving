@@ -9,7 +9,7 @@ Output: [2,1,3]
 
  */
 
-const searchBST = function (root, val) {
+/* const searchBST = function (root, val) {
   if (root === null) return null;
   if (val === undefined) return root;
   let cur = root;
@@ -19,7 +19,16 @@ const searchBST = function (root, val) {
     else cur = cur.right;
   }
   return null;
-};
+}; */
+
+// Recursive
+const searchBST = function (root, val) {
+  if(val === undefined) return root;
+  if (!root) return null
+  if (root.val === val) return root;
+  if (root.val > val ) return searchBST(root.left, val);
+  if (root.val < val) return searchBST(root.right, val);
+}
 
 // Time Complexity: O(logn)
 // Space Complexity: O(1)
