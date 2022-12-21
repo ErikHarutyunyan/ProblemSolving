@@ -12,7 +12,7 @@ function countBits(num) {
 function evenOrOdd(num) {
   let answer = "";
 
-  if (count_of_bits(num) & 1) {
+  if (countBits(num) & 1) {
     answer = "odd";
   } else {
     answer = "even";
